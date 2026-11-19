@@ -1,1 +1,1 @@
-V36 · Menú unificado en ambas páginas (Inicio, ¿Por qué importa?, Parlamento, El mapa). Abrir index.html.
+V37 · Subrayado animado en el menú, pestaña 'Partidos con opciones' con tabla 'Todas las provincias' (escaños, para ganar, para perder) y barra deslizante entre pestañas. Abrir index.html.

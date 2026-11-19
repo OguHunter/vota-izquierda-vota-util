@@ -16,7 +16,7 @@ function upd(){const T=tot(M,Tv),r=sum(T,RT),l=sum(T,L),o=350-r-l;$('pv').textCo
  const g=l>=176,e=$('msg');e.className='msg'+(g?' ok':'');e.textContent=g?`La izquierda llega a ${l} escaños: mayoría absoluta.`:r>177?`La derecha mantiene la mayoría absoluta con ${r} escaños.`:r>=176?`La derecha queda en ${r}: justo en el límite. Un escaño menos y pierde la mayoría.`:`La derecha pierde la mayoría absoluta con ${r} escaños.`}
 const r1=sum(tot(0,1),RT);$('h0').textContent=r0;$('txt').innerHTML=`Con el voto útil la derecha cae de <b>${r0}</b> a <b>${r1}</b> escaños, basándonos en las encuestas. Es el límite de la mayoría absoluta. ¿Y si además nos movilizamos más allá de las encuestas…?`;
 $('sl').oninput=e=>{M=e.target.value/10;upd()};$('sv').oninput=e=>{Tv=e.target.value/100;upd()};
-const SL=['Vota útil.','Cada escaño importa.','Que no se pierda ni un voto.','Quítale la mayoría a la derecha.','Suma, no dispersa.'],ty=$('ty');
+const SL=['Vota Izquierda.','Cada escaño importa.','Que no se pierda ni un voto.','Quítale la mayoría a la derecha.','Suma, no dispersa.'],ty=$('ty');
 (function type(i=0,j=0,d=0){if(rm){ty.textContent=SL[0];return}const w=SL[i];j+=d?-1:1;ty.textContent=w.slice(0,j);let ms=d?32:68;if(!d&&j===w.length){d=1;ms=1700}else if(d&&!j){d=0;i=(i+1)%SL.length;ms=380}setTimeout(()=>type(i,j,d),ms)})();
 upd();dr(rm?0:1);$('hn').textContent=rm?r1:r0;if(!rm){setTimeout(()=>{const t0=performance.now();(function f(n){const x=Math.min(1,(n-t0)/2200);if(x<1){requestAnimationFrame(f)}else dr();$('hn').textContent=Math.round(r0+(r1-r0)*ease(x))})(t0)},800)}
 addEventListener('message',e=>{if(e.data&&e.data.h)$('ex').style.height=e.data.h+'px';if(e.data&&e.data.top)$('ex').scrollIntoView()});
