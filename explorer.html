@@ -973,7 +973,20 @@ body{font-family:'DM Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI'
 @keyframes v38ImpactEnter{from{opacity:.6;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:600px){#mergerPanel .v38-impact{padding:16px 15px;border-radius:16px}#mergerPanel .v38-impact-main{gap:12px}#mergerPanel .v38-impact-number{font-size:38px!important}#mergerPanel .v38-impact-text strong{font-size:15px}#mergerPanel .v38-comparison{grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr);gap:5px}#mergerPanel .v38-compare-side{padding:10px 5px}#mergerPanel .v38-compare-side span{font-size:9px}#mergerPanel .v38-compare-side strong{font-size:29px}#mergerPanel .v38-compare-arrow{font-size:21px}}
 @media(prefers-reduced-motion:reduce){#mergerPanel .v38-impact{animation:none}}
-</style></head>
+</style><style id="tutcss">#tut{position:fixed;inset:0;z-index:99999;pointer-events:none;opacity:0;transition:opacity .4s}#tut.show{opacity:1}#tut.nt *{transition:none!important}
+#tut .tb{position:absolute;background:rgba(10,16,32,.7);backdrop-filter:blur(2px);pointer-events:auto;transition:all .55s cubic-bezier(.65,0,.35,1)}
+#tut .tspot{position:absolute;border-radius:18px;pointer-events:auto;box-shadow:0 0 0 3px #fff,0 0 0 7px rgba(227,35,77,.55),0 0 30px 6px rgba(227,35,77,.35);transition:all .55s cubic-bezier(.65,0,.35,1);animation:tp 2s ease-in-out infinite}#tut .tspot.go{pointer-events:none}
+@keyframes tp{50%{box-shadow:0 0 0 3px #fff,0 0 0 11px rgba(227,35,77,.25),0 0 34px 10px rgba(227,35,77,.22)}}
+#tut .tcard{position:absolute;pointer-events:auto;background:#fff;color:#101a2c;border-radius:22px;padding:22px 20px 16px;box-shadow:0 24px 70px rgba(5,10,30,.45);transition:top .55s cubic-bezier(.65,0,.35,1),left .55s cubic-bezier(.65,0,.35,1);font:15px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif;overflow:hidden}
+#tut .tcard:before{content:"";position:absolute;left:0;top:0;height:4px;width:var(--p,0%);background:linear-gradient(90deg,#e3234d,#7b4be0);transition:width .5s}
+#tut .tin{animation:tin .45s cubic-bezier(.2,.8,.2,1)}@keyframes tin{from{opacity:0;transform:translateY(8px)}}
+#tut .tk{font-size:12px;font-weight:800;letter-spacing:.12em;color:#7b4be0}#tut h3{margin:4px 30px 6px 0;font-size:22px;letter-spacing:-.03em;line-height:1.15;font-weight:850}#tut p{margin:0;color:#4c586b;font-size:15px;line-height:1.5}
+#tut .th{margin-top:10px;font-weight:800;color:#e3234d;font-size:14px;display:none}#tut .th.on{display:block;animation:tq 1.2s ease-in-out infinite}@keyframes tq{50%{transform:translateX(5px)}}
+#tut .tx{position:absolute;right:12px;top:14px;width:34px;height:34px;border:0;border-radius:50%;background:#f0ede7;cursor:pointer;font-size:15px;color:#101a2c}
+#tut .tdots{display:flex;gap:4px;margin:14px 0 12px}#tut .tdots i{height:5px;flex:1;border-radius:4px;background:#e4e0d8;transition:background .3s}#tut .tdots i.on{background:#e3234d}
+#tut .tn{display:flex;gap:10px}#tut .tn button{flex:1;min-height:46px;border:0;border-radius:14px;font-weight:800;font-size:15px;cursor:pointer;transition:transform .2s,opacity .2s}#tut .tp{background:#f0ede7;color:#101a2c}#tut .tg{background:linear-gradient(120deg,#e3234d,#c93a9a);color:#fff}#tut .tn button:hover{transform:translateY(-2px)}#tut .tp:disabled{opacity:.4;pointer-events:none}
+#provinceMap.tut-lock .map-province:not(.tut-keep),#provinceMap.tut-lock .map-city{pointer-events:none!important}
+@media(prefers-reduced-motion:reduce){#tut *{transition:none!important;animation:none!important}}</style></head>
 <body><div class="v18-aurora" aria-hidden="true"><div class="v18-orb v18-orb-red"></div><div class="v18-orb v18-orb-purple"></div><div class="v18-orb v18-orb-green"></div><div class="v18-orb v18-orb-orange"></div></div><div id="app"><header class="site-header"><div class="brand"><div class="brand-symbol">✳</div><span>EL ESCAÑO<span style="color:#9165f4">.</span></span></div><div class="header-right"><span class="header-pill"><span class="pill-dot"></span>ENCUESTAS PROVINCIALES · 2026</span><a class="header-cta" href="#laboratorio">EXPLORAR MAPA ↗</a><button type="button" class="method-open" data-open-method aria-haspopup="dialog" aria-controls="methodDrawer"><span class="method-open-symbol">◎</span> Cómo funciona</button></div></header>
 <section class="hero"><div><div class="eyebrow">SIMULADOR PROVINCIAL · CONGRESO</div><h1>Explora cómo se<br>disputa <span class="highlight">cada escaño.</span></h1><p>Compara provincia por provincia cuánto le falta a cada candidatura para ganar otro escaño o perder uno, quién recibiría ese diputado y cómo cambiaría el reparto ante nuevos escenarios. Todo calculado con D’Hondt.</p></div><div class="hero-art"><span class="art-title">52 CIRCUNSCRIPCIONES.<br>ESCENARIOS EDITABLES.</span><span class="art-num">52</span><span class="art-foot">D’HONDT · CONGRESO · 350 ESCAÑOS</span></div></section>
 <div class="top-note"><span aria-hidden="true">ⓘ</span><div><b>Base de datos:</b> las últimas encuestas provinciales disponibles. No se actualizan en tiempo real ni son resultados oficiales. La proximidad a un escaño es un cálculo matemático, no una probabilidad ni una indicación de voto.</div></div>
@@ -1350,7 +1363,7 @@ async function downloadPNG(){
  const changes=Object.entries(STATE.offsetsByProvince[STATE.province]||{}).filter(x=>x[1]);c.font='bold 19px Arial';if(changes.length)sy=wrap(c,changes.map(([p,v])=>nameOf(p,STATE.province)+': '+diffText(v)).join(' · '),139,sy+9,790,26);else{c.fillText('Sin ajustes de encuesta (0 pp)',139,sy+5);sy+=29;}
  if(STATE.mode==='margin'){const excluded=LEFT.filter(p=>!STATE.allowed.has(p));if(excluded.length)sy=wrap(c,'Excluidos: '+excluded.map(p=>nameOf(p)).join(', '),139,sy+4,790,25);}
  c.fillStyle='#716449';c.font='17px Arial';wrap(c,'Simulación determinista D’Hondt · no predicción ni recomendación.',139,Math.min(906,Math.max(872,sy+12)),795,23);
- const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob){toast('No se pudo crear la imagen');return;}
+ c.fillStyle='#716449';c.font='bold 17px Arial';c.fillText('By @Villa_Dish · votautil.es',139,1050);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob){toast('No se pudo crear la imagen');return;}
  const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='el-escano-'+STATE.province.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-')+'.png';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);toast('Tarjeta creada');
 }
 
@@ -2236,7 +2249,7 @@ init();
       ctx.fillStyle='#26443a';ctx.font='900 19px Arial';ctx.fillText('LEYENDA DE PARTIDOS',69,1033);
       const ids=['PSOE','FA','Podemos','BNG','ERC','Bildu','A.And','CHA'];
       ids.forEach((party,index)=>{const row=Math.floor(index/5),col=index%5,x=69+col*275,y=1059+row*31;ctx.fillStyle=colorOf(party,STATE.province);ctx.beginPath();ctx.roundRect(x,y-14,19,19,5);ctx.fill();ctx.fillStyle='#36584b';ctx.font='bold 14px Arial';ctx.fillText((party==='FA'?'Frente Amplio':nameOf(party,STATE.province)).slice(0,19),x+26,y+1);});
-      ctx.fillStyle='#6a7f70';ctx.font='16px Arial';ctx.fillText('Encuestas provisionales · escenarios hipotéticos · sin probabilidades',69,1152);
+      ctx.fillStyle='#6a7f70';ctx.font='16px Arial';ctx.fillText('Encuestas provisionales · escenarios hipotéticos · sin probabilidades',69,1152);ctx.textAlign='right';ctx.fillStyle='#26443a';ctx.font='900 18px Arial';ctx.fillText('By @Villa_Dish · votautil.es',1432,1152);ctx.textAlign='left';
       const link=document.createElement('a');link.download='El_Escano_V20_'+(window.ElEscanoOverview?'Toda_Espana':STATE.province.replaceAll(' ','_'))+'.png';link.href=canvas.toDataURL('image/png');link.click();toast('Imagen preparada');
     };
     image.onerror=()=>{URL.revokeObjectURL(url);toast('No se pudo exportar el SVG de este navegador');};image.src=url;
@@ -2886,4 +2899,56 @@ const place=()=>{const a=sw.querySelector('.mode.active');if(a){p.style.width=a.
 p.style.transition='none';place();requestAnimationFrame(()=>requestAnimationFrame(()=>{p.style.transition=''}));
 sw.querySelectorAll('.mode').forEach(b=>new MutationObserver(place).observe(b,{attributes:true,attributeFilter:['class']}));addEventListener('resize',place);setTimeout(place,400);if(document.fonts)document.fonts.ready.then(place)}
 const ttl=()=>{const o=typeof STATE!=='undefined'&&STATE.mode==='opportunity',s=document.querySelector('#v15CompareDetails>summary>span'),r=document.querySelector('#v15CompareDetails .row-title');if(s)s.innerHTML=o?'<b>Todas</b> las provincias':'<b>Comparar</b> todos los partidos';if(r)r.textContent=o?'Provincias con escaño o entrada cercana · lo que falta para ganar o perder':'Movilización y trasvases parciales · distancia mínima'};
-const t=document.getElementById('thresholds');if(t)new MutationObserver(ttl).observe(t,{childList:true});ttl()})()</script></body></html>
+const t=document.getElementById('thresholds');if(t)new MutationObserver(ttl).observe(t,{childList:true});ttl()})()</script><script>(function(){
+const $=id=>document.getElementById(id),Q=s=>document.querySelector(s),vis=x=>x&&x.getClientRects().length,svg=$('provinceMap'),FX=m=>{try{if(parent!==window)parent.postMessage(m,'*')}catch(_){}};
+// marca de agua dentro del mapa (sale en capturas y en el PNG)
+if(svg){const t=document.createElementNS('http://www.w3.org/2000/svg','text');[['x',346],['y',358],['font-family','Arial,sans-serif'],['font-size',11],['font-weight',800],['fill','#5d6879'],['pointer-events','none']].forEach(a=>t.setAttribute(a[0],a[1]));t.textContent='By @Villa_Dish';svg.appendChild(t);const u=t.cloneNode();u.setAttribute('y',371);u.setAttribute('font-size',10.5);u.setAttribute('fill','#7b4be0');u.textContent='votautil.es';svg.appendChild(u)}
+// arreglo: las opciones descartadas en «Voto útil» no afectan a «Partidos con opciones»
+let saved=null;const V=()=>window.ElEscanoV8&&ElEscanoV8.state,clr=()=>{try{ElEscanoV15Clear()}catch(_){}};
+$('modeOpportunity').addEventListener('click',()=>{const v=V();if(v&&!saved&&STATE.mode!=='opportunity'){saved={g:[...v.globalExcluded],h:v.hidePsoeRef};v.globalExcluded.clear();v.hidePsoeRef=false;clr()}},true);
+$('modeMargins').addEventListener('click',()=>{const v=V();if(v&&saved){saved.g.forEach(x=>v.globalExcluded.add(x));v.hidePsoeRef=saved.h;saved=null;clr();setTimeout(()=>{try{renderAll()}catch(_){}},0)}},true);
+// tutorial
+const mode=m=>{if(STATE.mode!==m)$(m==='margin'?'modeMargins':'modeOpportunity').click()},LU='.map-province[data-province="Lugo"]';
+const D=(s,t1,t2,x2)=>[{m:'margin',s:s+'>summary',t:t1,x:'Púlsalo para abrirlo.',w:()=>Q(s).open,a:()=>Q(s+'>summary').click(),hint:'👆 Pulsa para abrir'},{m:'margin',s:s,t:t2,x:x2}];
+const S=[
+{m:'margin',s:'.mode-switch',t:'Voto útil',x:'Este es el mapa de la izquierda. En «Voto útil» ves, en cada provincia, la candidatura que mejor aprovecha el voto: la que, con un pequeño trasvase, le quita un escaño a PP o Vox.'},
+{m:'margin',s:'#marginFilters',t:'Tus 11 opciones',x:'Aquí eliges a qué partidos estarías dispuesto a votar. Púlsalos para activarlos o descartarlos y todo se recalcula al momento.'},
+{m:'margin',s:'.map-shell',t:'El mapa',x:'Cada color es la candidatura destacada en esa provincia, con su logo. ¿Quieres saber más? Selecciona una provincia: probemos con Lugo.'},
+{m:'margin',s:()=>Q(LU),t:'Pulsa Lugo',x:'Haz clic en Lugo, la provincia iluminada, para ver su análisis.',w:()=>STATE.province==='Lugo',a:()=>Q(LU).dispatchEvent(new MouseEvent('click',{bubbles:true})),hint:'👆 Pulsa Lugo en el mapa',lock:LU},
+{m:'margin',s:'#focusResult',t:'Razonamiento y escenarios',x:'Esta sección explica el porqué: qué escaño está en juego, cuánto hay que subir o bajar y qué escenarios cambian el reparto.'},
+{m:'margin',s:()=>Q('#v8PartyDetail')||Q('.v8-party-grid'),t:'La situación en números',x:'Aquí ves, en cifras, los escaños de cada partido y a cuánto está de conseguir el siguiente o de defender el que ya tiene.'},
+...D('#v15SeatsDetails','Ver reparto de escaños','Reparto actual','Así se reparten los diputados de la provincia según las encuestas de partida.'),
+...D('#v15CompareDetails','Comparar todos los partidos','Todos los partidos','La situación actual de cada partido en esta provincia, en una tabla: escaños, cuánto le falta para ganar uno más y cuánto para perder el que tiene.'),
+...D('#v15TransfersDisclosure','Simular','Simular trasvases','Simula el impacto que tendría mover votos de un partido a otro, o que dos candidaturas fueran juntas.'),
+{m:'opportunity',s:['.map-shell','#mapLegend'],t:'Partidos con opciones',x:'Aquí ves dónde, según las encuestas, cada partido tiene opción de escaño. Color completo: asegurado o muy cerca. Color claro: hay oportunidad, pero difícil.'},
+{m:'opportunity',s:()=>[...document.querySelectorAll('[data-open-polls]')].find(vis),t:'Cambiar encuestas',x:'¿No te fías del todo de las encuestas? Aquí puedes subir o bajar a cada partido a nivel nacional. No depende de la población: ese número se suma o resta directamente en cada provincia y el mapa se adapta. Los cambios se ven sobre el mapa.'}];
+let i=-1,on=0,VH=innerHeight,armed=0,tm,root,card,spot,bl;
+function build(){root=document.createElement('div');root.id='tut';root.innerHTML='<i class="tb"></i><i class="tb"></i><i class="tb"></i><i class="tb"></i><div class="tspot"></div><div class="tcard" role="dialog" aria-live="polite" aria-label="Tutorial"><button class="tx" aria-label="Salir del tutorial">✕</button><div class="tc"><div class="tk"></div><h3></h3><p></p><div class="th"></div></div><div class="tdots">'+S.map(()=>'<i></i>').join('')+'</div><div class="tn"><button class="tp">← Anterior</button><button class="tg">Siguiente →</button></div></div>';document.body.appendChild(root);
+bl=[...root.querySelectorAll('.tb')];spot=Q('#tut .tspot');card=Q('#tut .tcard');
+Q('#tut .tx').onclick=end;Q('#tut .tp').onclick=()=>go(i-1);Q('#tut .tg').onclick=nxt}
+function nxt(){const s=S[i];if(s.w&&armed&&!s.w()){s.a();return}go(i+1)}
+function R(sel){const l=[].concat(typeof sel==='function'?sel():sel).map(x=>typeof x==='string'?Q(x):x).filter(vis);if(!l.length)return null;let t=1e9,a=1e9,b=-1,r=-1;l.forEach(x=>{const q=x.getBoundingClientRect();t=Math.min(t,q.top);a=Math.min(a,q.left);b=Math.max(b,q.bottom);r=Math.max(r,q.right)});return{t:t+scrollY,l:a+scrollX,b:b+scrollY,r:r+scrollX}}
+function lay(){const s=S[i];if(!s)return;const r=R(s.s);if(!r)return;const W=innerWidth,H=innerHeight,p=10,h={t:Math.max(0,r.t-p),l:Math.max(0,r.l-p),b:Math.min(H,r.b+p),r:Math.min(W,r.r+p)};
+const set=(e,t,l,w,x)=>{e.style.cssText+=';top:'+t+'px;left:'+l+'px;width:'+Math.max(0,w)+'px;height:'+Math.max(0,x)+'px'};
+const cw=Math.min(370,W-24);card.style.width=cw+'px';const ch=card.offsetHeight,g=16,av=VH-110;let hh=h.b-h.t;const tall=hh>VH*.7,wide=h.r-h.l>W-cw-40;
+if(!tall&&wide&&hh+ch+g>av){h.b=h.t+Math.max(120,av-ch-g);hh=h.b-h.t}
+const cx=Math.max(12,Math.min(W-cw-12,(h.l+h.r)/2-cw/2)),sy=Math.max(8,Math.min(H-ch-8,h.t+(hh-ch)/2));
+const C={r:[sy,h.r+g],l:[sy,h.l-cw-g],b:[h.b+g,cx],a:[h.t-ch-g,cx]},ok=k=>{const q=C[k];return q[0]>=8&&q[0]+ch<=H-8&&q[1]>=12&&q[1]+cw<=W-12},k=(tall?['a','b','r','l']:['r','l','b','a']).find(ok);let top,left;
+if(k){top=C[k][0];left=C[k][1]}else{const q=h.b+g+ch<=H?C.b:C.a;top=Math.max(8,Math.min(H-ch-8,q[0]));left=q[1]}
+set(bl[0],0,0,W,h.t);set(bl[1],h.b,0,W,H-h.b);set(bl[2],h.t,0,h.l,h.b-h.t);set(bl[3],h.t,h.r,W-h.r,h.b-h.t);set(spot,h.t,h.l,h.r-h.l,h.b-h.t);
+card.style.top=top+'px';card.style.left=left+'px';return[Math.min(h.t,top),Math.max(h.b,top+ch)]}
+const foc=()=>{const f=lay();if(f)FX({focus:f})};
+function go(n){if(n>=S.length){end();return}if(n<0)return;i=n;const s=S[n];mode(s.m);svg.classList.toggle('tut-lock',!!s.lock);document.querySelectorAll('.tut-keep').forEach(x=>x.classList.remove('tut-keep'));if(s.lock)Q(s.lock).classList.add('tut-keep');
+armed=!!s.w&&!s.w();spot.classList.toggle('go',!!s.w);const c=Q('#tut .tc');c.classList.remove('tin');void c.offsetWidth;c.classList.add('tin');
+Q('#tut .tk').textContent='PASO '+(n+1)+' DE '+S.length;Q('#tut h3').textContent=s.t;Q('#tut p').textContent=s.x;const h=Q('#tut .th');h.textContent=s.hint||'';h.classList.toggle('on',!!s.hint&&armed);
+card.style.setProperty('--p',(n+1)/S.length*100+'%');root.querySelectorAll('.tdots i').forEach((d,k)=>d.classList.toggle('on',k<=n));Q('#tut .tp').disabled=!n;
+Q('#tut .tg').textContent=n===S.length-1?'Terminar ✓':(s.w&&armed?'Hazlo por mí':'Siguiente →');
+if(!R(s.s)&&!s.w){go(n+(n>=i?1:-1));return}
+foc();setTimeout(foc,450);setTimeout(foc,1100)}
+function tick(){const s=S[i];lay();if(s&&s.w&&armed&&s.w()){armed=0;Q('#tut .th').classList.remove('on');Q('#tut .tg').textContent='Siguiente →';const k=i;setTimeout(()=>{if(on&&i===k)go(i+1)},900)}}
+function start(){if(on)return;on=1;if(!root)build();root.classList.add('nt','show');FX({tut:'start'});go(0);lay();requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.remove('nt')));tm=setInterval(tick,200)}
+function end(){on=0;clearInterval(tm);root.classList.remove('show');svg.classList.remove('tut-lock');FX({tut:'end'})}
+function key(k){if(!on)return;if(k==='ArrowRight')nxt();else if(k==='ArrowLeft')go(i-1);else if(k==='Escape')end()}
+addEventListener('keydown',e=>key(e.key));addEventListener('resize',lay);
+addEventListener('message',e=>{const d=e.data||{};if(d.vh)VH=d.vh;if(d.tut==='start')start();if(d.key)key(d.key)});
+})()</script></body></html>
